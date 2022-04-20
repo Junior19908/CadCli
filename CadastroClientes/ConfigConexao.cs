@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CadastroClientes
 {
-    public partial class Form2 : Form
+    public partial class ConfigConexao : Form
     {
-        public Form2()
+        public ConfigConexao()
         {
             InitializeComponent();
         }
