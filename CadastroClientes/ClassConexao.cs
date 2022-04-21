@@ -11,8 +11,8 @@ namespace CadastroClientes
     {
         public static OleDbConnection DBSCV()
         {
-            OleDbConnection CONEX = new OleDbConnection();
-            CONEX.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\SISTEMADECADASTRO\DBSCV.accdb";
+            string sql = System.Configuration.ConfigurationManager.ConnectionStrings["DBSCVCaminho"].ConnectionString;
+            OleDbConnection CONEX = new OleDbConnection(sql);
             CONEX.Open();
             return CONEX;
         }

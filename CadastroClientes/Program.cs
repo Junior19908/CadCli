@@ -10,14 +10,23 @@ namespace CadastroClientes
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
+            //ConfigConexao configConexao = new ConfigConexao();
+            //configConexao.ShowDialog();
 
-            Login formlogin = new Login();
-            formlogin.ShowDialog();
-
-            if (formlogin.FMP == true)
+            try
             {
-                Application.Run(new Menu());
+                ApplicationConfiguration.Initialize();
+                Login formlogin = new Login();
+                formlogin.ShowDialog();
+
+                if (formlogin.FMP == true)
+                {
+                    Application.Run(new Menu());
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

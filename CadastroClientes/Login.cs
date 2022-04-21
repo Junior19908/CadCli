@@ -83,5 +83,26 @@ namespace CadastroClientes
         {
             Logar();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ClassConexao.DBSCV().State == ConnectionState.Open)
+                {
+                    
+                }
+            }
+            catch (OleDbException)
+            {
+                ConfigConexao configConexao = new ConfigConexao();
+                configConexao.ShowDialog();
+                //this.Dispose();
+            }
+            catch (Exception Err)
+            {
+                MessageBox.Show(Err.Message);
+            }
+        }
     }
 }
