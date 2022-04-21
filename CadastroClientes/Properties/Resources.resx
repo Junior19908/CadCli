@@ -121,10 +121,19 @@
   <data name="Siggy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Siggy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shop-icon-png-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop-icon-png-6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banner-app-logo4996964065204094170" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banner-app-logo4996964065204094170.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Huvafen-Fushi-Sunrise-Dawn-Maldives-Overwater-Spa-Paul-Reiffer-Professional-Landscape-Photograph-Photographer-Pink-Blue-Sea-Ocean-Jetty-Wooden-Per-Aquum@2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Huvafen-Fushi-Sunrise-Dawn-Maldives-Overwater-Spa-Paul-Reiffer-Professional-Landscape-Photograph-Photographer-Pink-Blue-Sea-Ocean-Jetty-Wooden-Per-Aquum@2x.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -63,9 +63,40 @@ namespace CadastroClientes.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banner_app_logo4996964065204094170 {
+            get {
+                object obj = ResourceManager.GetObject("banner-app-logo4996964065204094170", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Huvafen_Fushi_Sunrise_Dawn_Maldives_Overwater_Spa_Paul_Reiffer_Professional_Landscape_Photograph_Photographer_Pink_Blue_Sea_Ocean_Jetty_Wooden_Per_Aquum_2x {
+            get {
+                object obj = ResourceManager.GetObject("Huvafen-Fushi-Sunrise-Dawn-Maldives-Overwater-Spa-Paul-Reiffer-Professional-Lands" +
+                        "cape-Photograph-Photographer-Pink-Blue-Sea-Ocean-Jetty-Wooden-Per-Aquum@2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus {
             get {
                 object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shop_icon_png_6 {
+            get {
+                object obj = ResourceManager.GetObject("shop-icon-png-6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
