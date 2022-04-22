@@ -35,9 +35,9 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCodigoCliente = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.ComboBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnFichaCadastro = new MetroFramework.Controls.MetroButton();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnGravar = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
@@ -61,9 +61,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRemoverFoto = new System.Windows.Forms.Button();
+            this.btnAdicionarFoto = new System.Windows.Forms.Button();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.txtCelSecundario = new System.Windows.Forms.MaskedTextBox();
             this.txtCelPessoal = new System.Windows.Forms.MaskedTextBox();
             this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
@@ -76,6 +76,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAbrir = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.btnArquivo = new System.Windows.Forms.Button();
             this.txtCaminho = new System.Windows.Forms.TextBox();
@@ -84,11 +85,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridArquivos)).BeginInit();
             this.panel2.SuspendLayout();
@@ -133,9 +138,9 @@
             this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Controls.Add(this.btnPesquisar);
             this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.txtCodigoCliente);
             this.tabPage1.Controls.Add(this.txtCidade);
-            this.tabPage1.Controls.Add(this.metroButton1);
+            this.tabPage1.Controls.Add(this.btnFichaCadastro);
             this.tabPage1.Controls.Add(this.btnLimpar);
             this.tabPage1.Controls.Add(this.btnGravar);
             this.tabPage1.Controls.Add(this.label16);
@@ -159,9 +164,9 @@
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.txtCep);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.btnRemoverFoto);
+            this.tabPage1.Controls.Add(this.btnAdicionarFoto);
+            this.tabPage1.Controls.Add(this.picFoto);
             this.tabPage1.Controls.Add(this.txtCelSecundario);
             this.tabPage1.Controls.Add(this.txtCelPessoal);
             this.tabPage1.Controls.Add(this.txtCNPJ);
@@ -209,13 +214,15 @@
             this.label19.TabIndex = 42;
             this.label19.Text = "Código do Cliente";
             // 
-            // textBox5
+            // txtCodigoCliente
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(704, 28);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(143, 23);
-            this.textBox5.TabIndex = 41;
+            this.txtCodigoCliente.Enabled = false;
+            this.txtCodigoCliente.Location = new System.Drawing.Point(704, 28);
+            this.txtCodigoCliente.Name = "txtCodigoCliente";
+            this.txtCodigoCliente.Size = new System.Drawing.Size(143, 23);
+            this.txtCodigoCliente.TabIndex = 41;
+            this.txtCodigoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodigoCliente.DoubleClick += new System.EventHandler(this.txtCodigoCliente_DoubleClick);
             // 
             // txtCidade
             // 
@@ -225,15 +232,15 @@
             this.txtCidade.Size = new System.Drawing.Size(242, 23);
             this.txtCidade.TabIndex = 40;
             // 
-            // metroButton1
+            // btnFichaCadastro
             // 
-            this.metroButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroButton1.Location = new System.Drawing.Point(705, 260);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(142, 23);
-            this.metroButton1.TabIndex = 39;
-            this.metroButton1.Text = "&Ficha de Cadastro";
-            this.metroButton1.UseSelectable = true;
+            this.btnFichaCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFichaCadastro.Location = new System.Drawing.Point(705, 260);
+            this.btnFichaCadastro.Name = "btnFichaCadastro";
+            this.btnFichaCadastro.Size = new System.Drawing.Size(142, 23);
+            this.btnFichaCadastro.TabIndex = 39;
+            this.btnFichaCadastro.Text = "&Ficha de Cadastro";
+            this.btnFichaCadastro.UseSelectable = true;
             // 
             // btnLimpar
             // 
@@ -456,37 +463,39 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "&Cep/Nº:";
             // 
-            // button2
+            // btnRemoverFoto
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(623, 235);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "&Remover";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRemoverFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoverFoto.Location = new System.Drawing.Point(623, 235);
+            this.btnRemoverFoto.Name = "btnRemoverFoto";
+            this.btnRemoverFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoverFoto.TabIndex = 17;
+            this.btnRemoverFoto.Text = "&Remover";
+            this.btnRemoverFoto.UseVisualStyleBackColor = true;
+            this.btnRemoverFoto.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnAdicionarFoto
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(623, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "&Adicionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdicionarFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdicionarFoto.Location = new System.Drawing.Point(623, 207);
+            this.btnAdicionarFoto.Name = "btnAdicionarFoto";
+            this.btnAdicionarFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionarFoto.TabIndex = 16;
+            this.btnAdicionarFoto.Text = "&Adicionar";
+            this.btnAdicionarFoto.UseVisualStyleBackColor = true;
+            this.btnAdicionarFoto.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // picFoto
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::CadastroClientes.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(704, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 156);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.picFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picFoto.Image = global::CadastroClientes.Properties.Resources.user;
+            this.picFoto.Location = new System.Drawing.Point(704, 98);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(143, 156);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 15;
+            this.picFoto.TabStop = false;
             // 
             // txtCelSecundario
             // 
@@ -585,6 +594,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnAbrir);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.btnArquivo);
             this.tabPage2.Controls.Add(this.txtCaminho);
@@ -596,6 +606,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Arquivos";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAbrir
+            // 
+            this.btnAbrir.Location = new System.Drawing.Point(772, 381);
+            this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.Size = new System.Drawing.Size(75, 23);
+            this.btnAbrir.TabIndex = 4;
+            this.btnAbrir.Text = "&Abrir";
+            this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // label18
             // 
@@ -614,6 +634,7 @@
             this.btnArquivo.TabIndex = 2;
             this.btnArquivo.Text = "&Enviar";
             this.btnArquivo.UseVisualStyleBackColor = true;
+            this.btnArquivo.Click += new System.EventHandler(this.btnArquivo_Click);
             // 
             // txtCaminho
             // 
@@ -627,11 +648,16 @@
             this.dtGridArquivos.AllowUserToAddRows = false;
             this.dtGridArquivos.AllowUserToOrderColumns = true;
             this.dtGridArquivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridArquivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.col,
+            this.Column3});
             this.dtGridArquivos.Location = new System.Drawing.Point(6, 67);
             this.dtGridArquivos.Name = "dtGridArquivos";
             this.dtGridArquivos.RowTemplate.Height = 25;
             this.dtGridArquivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtGridArquivos.Size = new System.Drawing.Size(841, 339);
+            this.dtGridArquivos.Size = new System.Drawing.Size(841, 308);
             this.dtGridArquivos.TabIndex = 0;
             this.dtGridArquivos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridArquivos_CellDoubleClick);
             this.dtGridArquivos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtGridArquivos_MouseDoubleClick);
@@ -678,6 +704,31 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Módulo de Cadastro de Cliente";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "col_IdArquivo";
+            this.Column1.HeaderText = "idArquivo";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "col_nomeArquivo";
+            this.Column2.HeaderText = "NomeArquivo";
+            this.Column2.Name = "Column2";
+            // 
+            // col
+            // 
+            this.col.DataPropertyName = "col_arquivo";
+            this.col.HeaderText = "Column3";
+            this.col.Name = "col";
+            this.col.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "col_IDCliente";
+            this.Column3.HeaderText = "idCliente";
+            this.Column3.Name = "Column3";
+            // 
             // CadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -688,12 +739,13 @@
             this.MinimumSize = new System.Drawing.Size(910, 595);
             this.Name = "CadastroClientes";
             this.Style = MetroFramework.MetroColorStyle.Silver;
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CadastroClientes_KeyUp);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridArquivos)).EndInit();
@@ -712,9 +764,9 @@
         private Label label17;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private TextBox textBox5;
+        private TextBox txtCodigoCliente;
         private ComboBox txtCidade;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnFichaCadastro;
         private Button btnLimpar;
         private Button btnGravar;
         private Label label16;
@@ -738,9 +790,9 @@
         private Label label9;
         private MaskedTextBox txtCep;
         private Label label8;
-        private Button button2;
-        private Button button1;
-        private PictureBox pictureBox1;
+        private Button btnRemoverFoto;
+        private Button btnAdicionarFoto;
+        private PictureBox picFoto;
         private MaskedTextBox txtCelSecundario;
         private MaskedTextBox txtCelPessoal;
         private MaskedTextBox txtCNPJ;
@@ -762,5 +814,10 @@
         private Button btnVoltar;
         private Button btnPesquisar;
         private Label label19;
+        private Button btnAbrir;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn col;
+        private DataGridViewTextBoxColumn Column3;
     }
 }
