@@ -85,10 +85,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_arquivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_IDCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -649,10 +647,8 @@
             this.dtGridArquivos.AllowUserToOrderColumns = true;
             this.dtGridArquivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridArquivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.col,
-            this.Column3});
+            this.col_arquivo,
+            this.col_IDCliente});
             this.dtGridArquivos.Location = new System.Drawing.Point(6, 67);
             this.dtGridArquivos.Name = "dtGridArquivos";
             this.dtGridArquivos.RowTemplate.Height = 25;
@@ -704,30 +700,19 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Módulo de Cadastro de Cliente";
             // 
-            // Column1
+            // col_arquivo
             // 
-            this.Column1.DataPropertyName = "col_IdArquivo";
-            this.Column1.HeaderText = "idArquivo";
-            this.Column1.Name = "Column1";
+            this.col_arquivo.DataPropertyName = "col_arquivo";
+            this.col_arquivo.HeaderText = "col_arquivo";
+            this.col_arquivo.Name = "col_arquivo";
+            this.col_arquivo.Visible = false;
             // 
-            // Column2
+            // col_IDCliente
             // 
-            this.Column2.DataPropertyName = "col_nomeArquivo";
-            this.Column2.HeaderText = "NomeArquivo";
-            this.Column2.Name = "Column2";
-            // 
-            // col
-            // 
-            this.col.DataPropertyName = "col_arquivo";
-            this.col.HeaderText = "Column3";
-            this.col.Name = "col";
-            this.col.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "col_IDCliente";
-            this.Column3.HeaderText = "idCliente";
-            this.Column3.Name = "Column3";
+            this.col_IDCliente.DataPropertyName = "col_IDCliente";
+            this.col_IDCliente.HeaderText = "col_IDCliente";
+            this.col_IDCliente.Name = "col_IDCliente";
+            this.col_IDCliente.Visible = false;
             // 
             // CadastroClientes
             // 
@@ -815,9 +800,7 @@
         private Button btnPesquisar;
         private Label label19;
         private Button btnAbrir;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn col;
-        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn col_arquivo;
+        private DataGridViewTextBoxColumn col_IDCliente;
     }
 }

@@ -1,6 +1,7 @@
 using LinqToDB;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics;
 using static LinqToDB.DataProvider.SqlServer.SqlServerProviderAdapter;
 
 namespace CadastroClientes
@@ -154,16 +155,27 @@ namespace CadastroClientes
         {
             try
             {
-                comm = ClassConexao.DBSCV().CreateCommand();
-                comm.CommandText = "SELECT col_arquivo FROM TB_ArquivoDBSCV WHERE (col_idArquivo=@ID)";
-                ConfigurarParametrosAbrir(comm);
+                Process.Start(@"C:\\Users\\junio\\AppData\\Local\\Temp\\tmpB78C.pdf");
+                /*using (var comm = ClassConexao.DBSCV().CreateCommand())
+                {
+                    comm.CommandText = "SELECT col_arquivo FROM TB_ArquivoDBSCV WHERE col_idArquivo=@ID";
+                    comm.Parameters.Add(new OleDbParameter("@ID", dtGridArquivos.CurrentRow.Cells["col_idArquivo"].Value));
+                    var bytes = comm.ExecuteScalar() as byte[];
+                    if (bytes != null)
+                    {
+                        var nomeArquivo = dtGridArquivos.CurrentRow.Cells["col_nomeArquivo"].Value.ToString();
+                        var arquivoTemp = Path.GetTempFileName();
+                        arquivoTemp = Path.ChangeExtension(arquivoTemp, Path.GetExtension(nomeArquivo));
+                        File.WriteAllBytes(arquivoTemp, bytes);
+                        Process.Start("C:\\Users\\junio\\AppData\\Local\\Temp\\tmpB78C.pdf");
+                    }
+                }*/
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
-
         private void btnArquivo_Click(object sender, EventArgs e)
         {
             txtCodigoCliente.Text = codClientID.ToString();
@@ -205,17 +217,12 @@ namespace CadastroClientes
             comm.Parameters.Add(new OleDbParameter("@NomeArquivo", Path.GetFileName(caminhoArquivo)));
             comm.Parameters.Add(new OleDbParameter("@Arquivo", File.ReadAllBytes(caminhoArquivo)));
         }
-        private void ConfigurarParametrosAbrir(OleDbCommand comm)
-        {
-            comm.Parameters.Add(new OleDbParameter("@ID", dtGridArquivos.CurrentRow.Cells["col_id"].Value));
-        }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             Menu menu = new Menu();
             menu.Show();
             this.Visible = false;
         }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
